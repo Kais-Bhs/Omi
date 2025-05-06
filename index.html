@@ -4,19 +4,58 @@
   <meta charset="UTF-8" />
   <title>Dr. Olfa Gharbi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dr. Olfa Gharbi – Oncologue médicale à Sousse. Spécialiste en carcinologie médicale.">
+  <meta name="author" content="Dr. Olfa Gharbi">
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #ffffff;
       color: #2c2c2c;
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      width: 100%;
+      background-color: #800000;
+      color: white;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
     }
 
     header {
-      background-color: #800000; /* Bordeaux */
+      background-color: #800000;
       color: white;
       text-align: center;
-      padding: 3rem 1rem;
+      padding: 6rem 1rem 3rem;
     }
 
     header h1 {
@@ -87,6 +126,21 @@
       font-size: 0.9rem;
     }
 
+    /* Bouton Appel flottant */
+    .call-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #800000;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      font-weight: bold;
+      z-index: 1001;
+    }
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 1.8rem;
@@ -96,18 +150,37 @@
         width: 120px;
         height: 120px;
       }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 0.5rem 0;
+      }
     }
   </style>
 </head>
 <body>
 
+  <nav>
+    <ul>
+      <li><a href="#presentation">Présentation</a></li>
+      <li><a href="#experience">Expérience</a></li>
+      <li><a href="#formation">Formation</a></li>
+      <li><a href="#cabinet">Cabinet</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <header>
     <h1>Dr. Olfa Gharbi</h1>
     <p>Oncologue médicale – Spécialiste en carcinologie</p>
-    <img src="images/olfa.jpg" alt="Dr. Olfa Gharbi" class="profile-img">
+    <img src="images/olfa.jpg" alt="Portrait du Dr. Olfa Gharbi" class="profile-img">
   </header>
 
-  <section>
+  <section id="presentation" data-aos="fade-up">
     <h2>Présentation</h2>
     <ul>
       <li>🎓 Diplôme national de docteur en Médecine – 2000</li>
@@ -120,7 +193,7 @@
     </ul>
   </section>
 
-  <section>
+  <section id="experience" data-aos="fade-up">
     <h2>Expérience professionnelle</h2>
     <ul>
       <li>👩‍⚕️ Oncologue, Cabinet médical privé</li>
@@ -129,20 +202,22 @@
     </ul>
   </section>
 
-  <section>
+  <section id="formation" data-aos="fade-up">
     <h2>Formation</h2>
     <ul>
       <li>🎓 Doctorat en Médecine – Faculté de Médecine Ibn El Jazzar – Sousse</li>
     </ul>
   </section>
 
-  <section class="cabinet">
+  <section id="cabinet" class="cabinet" data-aos="fade-up">
     <h2>Cabinet Médical</h2>
     <p>📍 3<sup>ème</sup> étage, en face de la clinique Les Oliviers</p>
     <p>📍 Boulevard 14 Janvier, Résidence Bel Azur, Sousse 4071, Tunisie</p>
+    <iframe src="https://www.google.com/maps?q=Clinique+les+Oliviers,+Sousse,+Tunisie&output=embed"
+            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </section>
 
-  <section class="contact">
+  <section id="contact" class="contact" data-aos="fade-up">
     <h2>Contact</h2>
     <p>📞 <a href="tel:+21653575420">+216 53 575 420</a></p>
     <p>📞 <a href="tel:+21699575420">+216 99 575 420</a></p>
@@ -150,8 +225,15 @@
   </section>
 
   <footer>
-    &copy; 2025 Dr. Olfa Gharbi – Tous droits réservés
+    <p>&copy; 2025 Dr. Olfa Gharbi – Tous droits réservés</p>
+    <p>🕐 Horaires : Lundi – Vendredi, 9h – 17h</p>
   </footer>
 
+  <a href="tel:+21653575420" class="call-button">📞 Appeler</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
